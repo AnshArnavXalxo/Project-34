@@ -251,7 +251,7 @@ function showStones(){
 function keyReleased(){
   if (keyCode === 32) {
     endshot.velocityX=21;
-        endshot.velocityY=19;
+        endshot.velocityY=21;
 
     endshot.visible=true;
   
