@@ -4,12 +4,12 @@ class Rope
     {
       this.nlink = nlink
   const group = Body.nextGroup(true);
-  const rects = Composites.stack(1000, 100, this.nlink, 1, 2, 2, function(x, y) {
+  const rects = Composites.stack(1000, 100, this.nlink, 1.0000001, 2, 2, function(x, y) {
       return Bodies.rectangle(x, y, 20, 5, { collisionFilter: { group: group } });
   });
       
   this.pointA = pointA;
-  this.body = Composites.chain(rects, 0.5, 0, -0.6, 0, {stiffness: 0.6, length: 0.5, render: {type: 'line'}});
+  this.body = Composites.chain(rects, 0.5, 0, -0.6, 0, {stiffness: 0.8, length: 0.5, render: {type: 'line'}});
       
   World.add(engine.world, this.body);
   
